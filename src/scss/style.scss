@@ -5,3 +5,377 @@
 @include generate-container();
 @include column-default-style();
 @include generate-columns();
+
+body {
+    margin: 0;
+}
+
+.nav {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+
+        @media screen and (min-width: 40em) {
+            align-items: center;
+        }
+
+        .nav__hamburger--checkbox[type="checkbox"] {
+            display: none;
+        }
+
+        .nav__hamburger--checkbox[type="checkbox"]:checked+ul {
+            display: flex;
+        }
+
+        .nav__hamburger--label {
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            flex-wrap: wrap;
+            height: 1.5rem;
+            padding: 0.75rem;
+            width: 1.5rem;
+            border: 1px solid #222;
+            border-radius: 5px;
+
+            @media screen and (min-width: 40em) {
+                display: none;
+            }
+        }
+
+        .nav__list {
+            display: none;
+            flex-direction: column;
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+            width: 100%;
+
+            @media screen and (min-width: 40em) {
+                display: flex;
+                flex-direction: row;
+                width: auto;
+            }
+
+            .nav__item {
+                text-align: start;
+
+                .nav__link {
+                    color: #222;
+                    display: block;
+                    line-height: 1rem;
+                    padding: 1rem;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: #fdcc52;
+                    }
+                }
+
+            }
+        }
+
+        .nav__hamburger--line {
+            background: #222;
+            display: block;
+            height: 2px;
+            width: 1.5rem;
+        }
+    }
+}
+
+.start-page {
+    background-image: url(/dist/css/img/bg-pattern.png), linear-gradient(to right, rgb(218, 36, 49), rgb(122, 67, 151));
+}
+
+.card-title {
+    letter-spacing: 0px;
+    font-size: 31px;
+}
+
+.card__img--container {
+    display: flex;
+    justify-content: center;
+}
+
+.card-img {
+    
+    width: 310px;
+}
+
+/*Discover-section */
+
+.download-page {
+    background-color: rgb(252, 201, 73);
+}
+
+.discover-headline {
+    font-family: "catamaran", Arial, Helvetica, sans-serif;
+    font-size: 52px;
+    font-weight: 500;
+}
+
+.discover-p {
+    font-family: "muli", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.badges {
+    width: 200px;
+}
+
+
+/*Features-section*/
+
+.features-headline {
+    font-family: "catamaran", Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+.features-p {
+    font-family: "muli", Arial, Helvetica, sans-serif;
+    font-size: 17px;
+}
+
+.features-img {
+    width: 310px;
+}
+
+.feature-icons {
+    color: rgb(167, 52, 103);
+    font-size: 80px;
+}
+
+.embed-headline {
+    font-family: "catamaran", Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-size: 31px;
+}
+
+.embed-p {
+    font-family: "muli", Arial, Helvetica, sans-serif;
+    font-size: large;
+    line-height: 1.5rem;
+    color: rgb(116, 120, 130);
+}
+
+
+/*Contact-section*/
+
+.contact-page {
+    position: relative;
+    background-image: url(/css/img/bg-cta.jpg);
+    width: 100%;
+    background-size: 180%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* -webkit-filter: brightness(60%) */
+}
+
+.contact-headline {
+    font-family: "catamaran", Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+
+.my-btn {
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 30px;
+    color: black;
+    padding: 14px 42px 14px 42px;
+    letter-spacing: 2px;
+    font-family: "lato";
+    font-size: 11px;
+    transition: background, border 300ms;
+}
+
+.my-btn:hover {
+    background: #fdcc52;
+    border-color: #fdcc52;
+    cursor: pointer;
+}
+
+/*Social media section*/
+
+.social-media-page {
+    background-color: rgb(253, 199, 65);
+}
+
+.social-headline {
+    font-family: "catamaran", Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+.heart-icon {
+    color: rgb(221, 76, 57);
+}
+
+.social__icon--t {
+    background-color: rgb(29, 161, 243);
+    opacity: 90%;
+    vertical-align: middle;
+    font-size: 33px;
+    line-height: 48px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    margin-right: 12px;
+}
+
+.social__icon--f {
+    background-color: rgb(59, 89, 153);
+    opacity: 90%;
+    vertical-align: middle;
+    font-size: 38px;
+    line-height: 48px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    margin-right: 12px;
+}
+
+.social__icon--g {
+    background-color: rgb(221, 76, 57);
+    opacity: 90%;
+    vertical-align: middle;
+    font-size: 42px;
+    line-height: 48px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+
+.social__icon--g:hover {
+    opacity: 100%;
+}
+
+.social__icon--f:hover {
+    opacity: 100%;
+}
+
+.social__icon--t:hover {
+    opacity: 100%;
+}
+
+.google-icon {
+    color: white;
+}
+
+/*Footer*/
+
+footer {
+    background-color: rgb(34, 34, 34);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.copyright {
+    font-size: 11.8px;
+    font-family: "muli", Arial, Helvetica, sans-serif;
+    color: rgb(98, 98, 98);
+    margin-bottom: -0.05rem;
+}
+
+.modalButton-text {
+    color: rgb(98, 98, 98);
+    font-family: "muli", Arial, Helvetica, sans-serif;
+    font-size: 11.8px
+}
+
+.modalButton-text:hover {
+    color: #fdcc52;
+}
+
+/*Desktop settings*/
+
+@media screen and (min-width:992px) {
+    .social-headline {
+        font-size: 40px;
+    }
+    .contact-page {
+        background-size: 120%;
+    }
+    .contact-head {
+        margin-left: 140px !important;
+    }
+    .contact-headline {
+        font-size: 58px;
+    }
+    .my-btn {
+        font-size: 8px;
+        padding: 12px 35px 12px 35px;
+    }
+    .features-headline {
+        font-size: 40px;
+    }
+    .features-p {
+        font-size: 13.5px;
+    }
+    .features-img {
+        width: 230px;
+    }
+    .feature-icons {
+        font-size: 60px;
+    }
+    .embed-headline {
+        font-size: 22px;
+    }
+    .embed-p {
+        font-size: 12px;
+        line-height: 1.2rem;
+    }
+    .discover-p {
+        font-size: 13px;
+    }
+    .badges {
+        width: 140px;
+    }
+    .card-img {
+        width: 230px;
+    }
+    .card-title {
+        font-size: 34px;
+    }
+    .navbar {
+        width: 58%;
+        background-color: transparent !important;
+    }
+    .nav-link {
+        color: rgb(217, 198, 229) !important;
+    }
+    .nav-link:hover {
+        color: white !important;
+    }
+    .fixed-top.scrolled {
+        background-color: #fff !important;
+        transition: background-color 200ms linear;
+    }
+    .navbar.scrolled {
+        width: 100%
+    }
+    .navbar-brand.scrolled {
+        margin-left: 335px;
+        color: rgb(69, 69, 69) !important;
+    }
+    .navbar-brand.scrolled:hover {
+        color: #fdcc52 !important;
+    }
+    .navbar-nav.scrolled {
+        margin-right: 299px;
+    }
+    .nav-link.scrolled {
+        color: rgb(69, 69, 69) !important;
+        font-weight: bold;
+    }
+    .nav-link.scrolled:hover {
+        color: #fdcc52 !important;
+    }
+}
