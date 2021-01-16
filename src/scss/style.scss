@@ -253,20 +253,23 @@ body {
 /*Contact-section*/
 
 .contact-page {
-    position: relative;
-    background-image: url(/css/img/bg-cta.jpg);
-    width: 100%;
-    background-size: 180%;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* -webkit-filter: brightness(60%) */
+    position: relative;    
+}
+
+.contact-background {
+    width: 100%;   
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: brightness(60%);
 }
 
 .contact-headline {
     font-family: "catamaran", Arial, Helvetica, sans-serif;
     color: white;
     font-size: 50px;
-    letter-spacing: 1px;
+    font-weight: lighter;
+    letter-spacing: 1px;  
 }
 
 .my-btn {
@@ -388,7 +391,7 @@ footer {
         background-size: 120%;
     }
     .contact-head {
-        margin-left: 140px !important;
+        margin-left: 140px ;
     }
     .contact-headline {
         font-size: 58px;
@@ -430,16 +433,16 @@ footer {
     }
     .navbar {
         width: 58%;
-        background-color: transparent !important;
+        background-color: transparent ;
     }
     .nav-link {
-        color: rgb(217, 198, 229) !important;
+        color: rgb(217, 198, 229) ;
     }
     .nav-link:hover {
-        color: white !important;
+        color: white ;
     }
     .fixed-top.scrolled {
-        background-color: #fff !important;
+        background-color: #fff ;
         transition: background-color 200ms linear;
     }
     .navbar.scrolled {
@@ -447,19 +450,19 @@ footer {
     }
     .navbar-brand.scrolled {
         margin-left: 335px;
-        color: rgb(69, 69, 69) !important;
+        color: rgb(69, 69, 69) ;
     }
     .navbar-brand.scrolled:hover {
-        color: #fdcc52 !important;
+        color: #fdcc52 ;
     }
     .navbar-nav.scrolled {
         margin-right: 299px;
     }
     .nav-link.scrolled {
-        color: rgb(69, 69, 69) !important;
+        color: rgb(69, 69, 69) ;
         font-weight: bold;
     }
     .nav-link.scrolled:hover {
-        color: #fdcc52 !important;
+        color: #fdcc52 ;
     }
 }
