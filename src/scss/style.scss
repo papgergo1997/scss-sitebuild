@@ -292,13 +292,25 @@ body {
 
 /*Social media section*/
 
-.social-media-page {
+.social-media-section {
     background-color: rgb(253, 199, 65);
+    .social-media-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 0 5rem 0;
+    }
+    .social-headline {
+        font-family: "catamaran", Arial, Helvetica, sans-serif;
+        font-size: 45px;
+        font-weight: lighter;
+        line-height: 0;
+    }
 }
 
-.social-headline {
-    font-family: "catamaran", Arial, Helvetica, sans-serif;
-    font-size: 50px;
+.social-nav {
+    display: flex;
+    flex-direction: row;    
 }
 
 .heart-icon {
@@ -306,37 +318,40 @@ body {
 }
 
 .social__icon--t {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(29, 161, 243);
     opacity: 90%;
-    vertical-align: middle;
-    font-size: 33px;
-    line-height: 48px;
-    width: 60px;
-    height: 60px;
+    font-size: 30px;    
+    width: 70px;
+    height: 70px;
     border-radius: 100%;
     margin-right: 12px;
 }
 
 .social__icon--f {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(59, 89, 153);
     opacity: 90%;
-    vertical-align: middle;
-    font-size: 38px;
-    line-height: 48px;
-    width: 60px;
-    height: 60px;
+    font-size: 30px;  
+    width: 70px;
+    height: 70px;
     border-radius: 100%;
     margin-right: 12px;
 }
 
 .social__icon--g {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(221, 76, 57);
     opacity: 90%;
-    vertical-align: middle;
-    font-size: 42px;
-    line-height: 48px;
-    width: 60px;
-    height: 60px;
+    font-size: 36px;   
+    width: 70px;
+    height: 70px;
     border-radius: 100%;
 }
 
@@ -353,6 +368,12 @@ body {
 }
 
 .google-icon {
+    color: white;
+}
+.twitter-icon {
+    color: white;
+}
+.facebook-icon {
     color: white;
 }
 
