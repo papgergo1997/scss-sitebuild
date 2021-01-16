@@ -482,33 +482,58 @@ body {
 .features-headline {
   font-family: "catamaran", Arial, Helvetica, sans-serif;
   font-size: 50px;
+  font-weight: lighter;
+  line-height: 60px;
+  text-align: center;
+  margin: 5rem 0 0 0;
 }
 
 .features-p {
   font-family: "muli", Arial, Helvetica, sans-serif;
   font-size: 17px;
+  text-align: center;
+  margin: 0.75rem 0 1.5rem 0;
+  color: #6d767e;
+}
+
+.feature-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
 }
 
 .features-img {
+  margin: 5rem 0 5rem 0;
   width: 310px;
 }
 
 .feature-icons {
   color: #a73467;
   font-size: 80px;
+  padding-top: 5rem;
 }
 
 .embed-headline {
   font-family: "catamaran", Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
   font-size: 31px;
+  font-weight: lighter;
+  margin: 1rem 0 0 0;
 }
 
 .embed-p {
   font-family: "muli", Arial, Helvetica, sans-serif;
   font-size: large;
-  line-height: 1.5rem;
+  line-height: 1.75rem;
   color: #747882;
+  margin: 0;
 }
 
 /*Contact-section*/
