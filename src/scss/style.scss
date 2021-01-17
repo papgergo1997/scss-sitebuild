@@ -1,32 +1,21 @@
+@use 'variables/colors' as *;
 @import "variables/variables";
 @import "mixins/mixins";
 @import "functions/functions";
+@import "variables/fonts";
+
 
 @include generate-container();
 @include column-default-style();
 @include generate-columns();
 
-@font-face {
-    src: url(/dist/css/fonts/Catamaran/Catamaran-VariableFont_wght.ttf);
-    font-family: "catamaran";
-    font-weight: 100;
-}
 
-@font-face {
-    src: url(/dist/css/fonts/Lato/Lato-Regular.ttf);
-    font-family: "lato";
-    font-weight: 400;
-}
-
-@font-face {
-    src: url(/dist/css/fonts/Mulish/Mulish-VariableFont_wght.ttf);
-    font-family: "muli";
-    font-weight: 400;
-}
 
 body {
     margin: 0;
 }
+
+/*Navigation*/
 
 .nav {
     background: white;
@@ -42,8 +31,8 @@ body {
     }
     .navbar-brand {
         text-decoration: none;
-        color: #fdcc52;
-        font-family: "catamaran";
+        color: $special-yellow;
+        font-family: $headline-fonts;
         position: absolute;
         left: 3rem;
         top: 0.5rem;
@@ -116,13 +105,13 @@ body {
                     padding: 1rem;
                     font-size: 11px;
                     letter-spacing: 1px;
-                    font-family: "catamaran", Arial, Helvetica, sans-serif;
+                    font-family: $headline-fonts;
                     font-weight: 500;
                     text-decoration: none;
                     
 
                     &:hover {
-                        color: #fdcc52;
+                        color: $special-yellow;
                     }
                 }
 
@@ -130,7 +119,7 @@ body {
         }
         .menu-text {
             font-size: 12px;
-            font-family: "catamaran", Arial, Helvetica, sans-serif;
+            font-family: $headline-fonts;
             font-weight: bold;
             margin-top: 5px;
             margin-right: 2px;
@@ -143,12 +132,12 @@ body {
     }
 }
 
-
+/*Start-section*/
 
 .start-page {
     background-image: url(/dist/css/img/bg-pattern.png), linear-gradient(to right, rgb(218, 36, 49), rgb(122, 67, 151));
     background-repeat: repeat;
-    background-attachment: fixed;
+    background-attachment: fixed;  /*Ez egy nagyon jó beállítás*/
 }
 
 .card-body {
@@ -157,13 +146,13 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;  
-    margin-top: 4rem;  
+    margin-top: 4rem; 
 }
 
 .card-title {
-    color: #efefef;
+    color: $smoky-white;
     letter-spacing: 1px;
-    font-family: "catamaran", Arial, Helvetica, sans-serif;
+    font-family: $headline-fonts;
     font-weight: lighter;
     line-height: 35px;
     font-size: 27px;
@@ -183,21 +172,20 @@ body {
 /*Download-section */
 
 .download-section {
-    background-color: rgb(252, 201, 73);
+    background-color: $special-yellow;
     margin: 0;
     padding: 0;
-}
-
-.download-page {
-    align-items: center;
-    display: flex;
-    flex-direction: column;    
-    justify-content: center;
-    text-align: center;
+    .download-page {
+        align-items: center;
+        display: flex;
+        flex-direction: column;    
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 .discover-headline {
-    font-family: "catamaran", Arial, Helvetica, sans-serif;
+    font-family: $headline-fonts;
     font-size: 51px;
     font-weight: 500;
     line-height: 60px;
@@ -206,7 +194,7 @@ body {
 }
 
 .discover-p {
-    font-family: "muli", Arial, Helvetica, sans-serif;
+    font-family: $p-fonts;
     font-size: 18px;
     margin: 1rem 2rem 1rem 2rem;
 }
@@ -224,7 +212,7 @@ body {
 /*Features-section*/
 
 .features-headline {
-    font-family: "catamaran", Arial, Helvetica, sans-serif;
+    font-family: $headline-fonts;
     font-size: 50px;
     font-weight: lighter;
     line-height: 60px;
@@ -233,7 +221,7 @@ body {
 }
 
 .features-p {
-    font-family: "muli", Arial, Helvetica, sans-serif;
+    font-family: $p-fonts;
     font-size: 17px;
     text-align: center;
     margin: 0.75rem 0 1.5rem 0 ;
@@ -265,7 +253,7 @@ body {
 }
 
 .embed-headline {
-    font-family: "catamaran", Arial, Helvetica, sans-serif;
+    font-family: $headline-fonts;
     letter-spacing: 1px;
     font-size: 31px;
     font-weight: lighter;
@@ -273,7 +261,7 @@ body {
 }
 
 .embed-p {
-    font-family: "muli", Arial, Helvetica, sans-serif;
+    font-family: $p-fonts;
     font-size: large;
     line-height: 1.75rem;
     color: rgb(116, 120, 130);
@@ -304,7 +292,7 @@ body {
 }
 
 .contact-headline {
-    font-family: "catamaran", Arial, Helvetica, sans-serif;
+    font-family: $headline-fonts;
     color: white;
     font-size: 45px;
     font-weight: lighter;
@@ -318,24 +306,24 @@ body {
     background-color: transparent;
     border: 1px solid;
     border-radius: 30px;
-    color: #efefef;
+    color: $smoky-white;
     padding: 15px 42px 15px 42px;
     letter-spacing: 2px;
-    font-family: "lato";
+    font-family: "lato", Arial, Helvetica, sans-serif;
     font-size: 9px;
-    transition: background, border 300ms;
+    transition: background 300ms, border 300ms;
 }
 
 .my-btn:hover {
-    background: #fdcc52;
-    border-color: #fdcc52;
+    background: $special-yellow;
+    border-color: $special-yellow;
     cursor: pointer;
 }
 
 /*Social media section*/
 
 .social-media-section {
-    background-color: rgb(253, 199, 65);
+    background-color: $special-yellow;
     .social-media-page {
         display: flex;
         flex-direction: column;
@@ -343,11 +331,15 @@ body {
         padding: 3rem 0 5rem 0;
     }
     .social-headline {
-        font-family: "catamaran", Arial, Helvetica, sans-serif;
+        font-family: $headline-fonts;
         font-size: 45px;
         font-weight: lighter;
         line-height: 0;
     }
+}
+
+.heart-icon {
+    color: rgb(221, 76, 57);
 }
 
 .social-nav {
@@ -355,21 +347,38 @@ body {
     flex-direction: row;    
 }
 
-.heart-icon {
-    color: rgb(221, 76, 57);
+[class^="social__icon"] {
+    align-items: center;
+    border-radius: 100%;
+    display: flex; 
+    font-size: 30px; 
+    height: 70px;  
+    justify-content: center; 
+    margin-right: 12px;   
+    opacity: 90%;
+    width: 70px;     
 }
 
-.social__icon--t {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(29, 161, 243);
-    opacity: 90%;
-    font-size: 30px;    
-    width: 70px;
-    height: 70px;
-    border-radius: 100%;
-    margin-right: 12px;
+.social__icon--t {   
+    background-color: rgb(29, 161, 243);         
+}
+
+.social__icon--f {
+    background-color: rgb(59, 89, 153);         
+}
+
+.social__icon--g {    
+    background-color: rgb(221, 76, 57);    
+    font-size: 36px;   
+    margin: 0;    
+}
+
+[class^="social__icon"]:hover {
+    opacity: 100%;
+}
+
+[class^="icon"] {
+    color: white;
 }
 
 .tooltip {
@@ -379,13 +388,13 @@ body {
     visibility: hidden;
     width: 120px;
     background-color: #555;
-    color: #fff;
+    color: $smoky-white;
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
     position: absolute;
     font-size: 15px;
-    font-family: "muli", Arial, Helvetica, sans-serif;
+    font-family: $p-fonts;
     z-index: 1;
     bottom: 125%;
     left: 50%;
@@ -411,55 +420,9 @@ body {
     visibility: visible;
     opacity: 1;
     }
-}
-  
+}  
 
-.social__icon--f {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(59, 89, 153);
-    opacity: 90%;
-    font-size: 30px;  
-    width: 70px;
-    height: 70px;
-    border-radius: 100%;
-    margin-right: 12px;
-}
 
-.social__icon--g {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(221, 76, 57);
-    opacity: 90%;
-    font-size: 36px;   
-    width: 70px;
-    height: 70px;
-    border-radius: 100%;
-}
-
-.social__icon--g:hover {
-    opacity: 100%;
-}
-
-.social__icon--f:hover {
-    opacity: 100%;
-}
-
-.social__icon--t:hover {
-    opacity: 100%;
-}
-
-.google-icon {
-    color: white;
-}
-.twitter-icon {
-    color: white;
-}
-.facebook-icon {
-    color: white;
-}
 
 /*Footer*/
 
@@ -473,7 +436,7 @@ footer {
 .copyright {
     margin-top: 7px;
     font-size: 10.5px;
-    font-family: "muli", Arial, Helvetica, sans-serif;
+    font-family: $p-fonts;
     color: rgb(98, 98, 98);
     font-weight: lighter;
     margin-bottom: -0.05rem;
@@ -481,7 +444,7 @@ footer {
 
 [class^="modal__button"] {
     color: rgb(98, 98, 98);
-    font-family: "muli", Arial, Helvetica, sans-serif;
+    font-family: $p-fonts;
     line-height: 1.75rem;
     font-size: 10.5px;
     margin-right: 6px;
@@ -489,7 +452,7 @@ footer {
 
 [class^="modal__button"]:hover {
     cursor: pointer;
-    color: #fdcc52;
+    color: $special-yellow;
 }
 
 /*Modal*/
@@ -507,7 +470,7 @@ footer {
  
 .modal {
     position: relative;
-    background-color: #fefefe;
+    background-color: $smoky-white;
     margin: 20% auto; 
     padding: 20px 20px 30px 20px;
     border: 1px solid #888;
@@ -555,12 +518,12 @@ color: rgb(100, 100, 100);
 }
 
 .inmodal__button--blue {
-    background-color: #fdcc52;
+    background-color: $special-yellow;
   
 }
 
 .inmodal__button--grey {
-    background-color: #efefef;
+    background-color: $smoky-white;
    
 }
 
@@ -671,7 +634,7 @@ color: rgb(100, 100, 100);
         color: white !important;
     }
     .fixed-top.scrolled {
-        background-color: #fff ;
+        background-color: $smoky-white ;
         transition: background-color 200ms linear;
     }
     .navbar {
@@ -697,13 +660,13 @@ color: rgb(100, 100, 100);
         color: rgb(69, 69, 69) ;
     }
     .navbar-brand.scrolled:hover {
-        color: #fdcc52 ;
+        color: $special-yellow ;
     }    
     .nav__link.scrolled {
         color: rgb(69, 69, 69) !important;
         font-weight: bold;
     }
     .nav__link.scrolled:hover {
-        color: #fdcc52 !important;
+        color: $special-yellow !important;
     }
 }

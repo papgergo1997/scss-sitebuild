@@ -1,0 +1,21 @@
+@font-face {
+    src: url(/dist/css/fonts/Catamaran/Catamaran-VariableFont_wght.ttf);
+    font-family: "catamaran";
+    font-weight: 100;
+}
+
+@font-face {
+    src: url(/dist/css/fonts/Lato/Lato-Regular.ttf);
+    font-family: "lato";
+    font-weight: 400;
+}
+
+@font-face {
+    src: url(/dist/css/fonts/Mulish/Mulish-VariableFont_wght.ttf);
+    font-family: "muli";
+    font-weight: 400;
+}
+
+
+$headline-fonts: "catamaran", Arial, Helvetica, sans-serif;
+$p-fonts: "muli", Arial, Helvetica, sans-serif;

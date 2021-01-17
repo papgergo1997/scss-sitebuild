@@ -1,3 +1,19 @@
+@charset "UTF-8";
+@font-face {
+  src: url(/dist/css/fonts/Catamaran/Catamaran-VariableFont_wght.ttf);
+  font-family: "catamaran";
+  font-weight: 100;
+}
+@font-face {
+  src: url(/dist/css/fonts/Lato/Lato-Regular.ttf);
+  font-family: "lato";
+  font-weight: 400;
+}
+@font-face {
+  src: url(/dist/css/fonts/Mulish/Mulish-VariableFont_wght.ttf);
+  font-family: "muli";
+  font-weight: 400;
+}
 .container {
   box-sizing: border-box;
   display: flex;
@@ -309,25 +325,11 @@
   }
 }
 
-@font-face {
-  src: url(/dist/css/fonts/Catamaran/Catamaran-VariableFont_wght.ttf);
-  font-family: "catamaran";
-  font-weight: 100;
-}
-@font-face {
-  src: url(/dist/css/fonts/Lato/Lato-Regular.ttf);
-  font-family: "lato";
-  font-weight: 400;
-}
-@font-face {
-  src: url(/dist/css/fonts/Mulish/Mulish-VariableFont_wght.ttf);
-  font-family: "muli";
-  font-weight: 400;
-}
 body {
   margin: 0;
 }
 
+/*Navigation*/
 .nav {
   background: white;
   display: flex;
@@ -345,7 +347,7 @@ body {
 .nav .navbar-brand {
   text-decoration: none;
   color: #fdcc52;
-  font-family: "catamaran";
+  font-family: "catamaran", Arial, Helvetica, sans-serif;
   position: absolute;
   left: 3rem;
   top: 0.5rem;
@@ -433,10 +435,12 @@ body {
   margin-top: 5px;
 }
 
+/*Start-section*/
 .start-page {
   background-image: url(/dist/css/img/bg-pattern.png), linear-gradient(to right, #da2431, #7a4397);
   background-repeat: repeat;
   background-attachment: fixed;
+  /*Ez egy nagyon jó beállítás*/
 }
 
 .card-body {
@@ -470,12 +474,11 @@ body {
 
 /*Download-section */
 .download-section {
-  background-color: #fcc949;
+  background-color: #fdcc52;
   margin: 0;
   padding: 0;
 }
-
-.download-page {
+.download-section .download-page {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -604,9 +607,9 @@ body {
   color: #efefef;
   padding: 15px 42px 15px 42px;
   letter-spacing: 2px;
-  font-family: "lato";
+  font-family: "lato", Arial, Helvetica, sans-serif;
   font-size: 9px;
-  transition: background, border 300ms;
+  transition: background 300ms, border 300ms;
 }
 
 .my-btn:hover {
@@ -617,7 +620,7 @@ body {
 
 /*Social media section*/
 .social-media-section {
-  background-color: #fdc741;
+  background-color: #fdcc52;
 }
 .social-media-section .social-media-page {
   display: flex;
@@ -632,26 +635,47 @@ body {
   line-height: 0;
 }
 
+.heart-icon {
+  color: #dd4c39;
+}
+
 .social-nav {
   display: flex;
   flex-direction: row;
 }
 
-.heart-icon {
-  color: #dd4c39;
+[class^=social__icon] {
+  align-items: center;
+  border-radius: 100%;
+  display: flex;
+  font-size: 30px;
+  height: 70px;
+  justify-content: center;
+  margin-right: 12px;
+  opacity: 90%;
+  width: 70px;
 }
 
 .social__icon--t {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #1da1f3;
-  opacity: 90%;
-  font-size: 30px;
-  width: 70px;
-  height: 70px;
-  border-radius: 100%;
-  margin-right: 12px;
+}
+
+.social__icon--f {
+  background-color: #3b5999;
+}
+
+.social__icon--g {
+  background-color: #dd4c39;
+  font-size: 36px;
+  margin: 0;
+}
+
+[class^=social__icon]:hover {
+  opacity: 100%;
+}
+
+[class^=icon] {
+  color: white;
 }
 
 .tooltip {
@@ -661,7 +685,7 @@ body {
   visibility: hidden;
   width: 120px;
   background-color: #555;
-  color: #fff;
+  color: #efefef;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
@@ -689,55 +713,6 @@ body {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
-}
-
-.social__icon--f {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #3b5999;
-  opacity: 90%;
-  font-size: 30px;
-  width: 70px;
-  height: 70px;
-  border-radius: 100%;
-  margin-right: 12px;
-}
-
-.social__icon--g {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #dd4c39;
-  opacity: 90%;
-  font-size: 36px;
-  width: 70px;
-  height: 70px;
-  border-radius: 100%;
-}
-
-.social__icon--g:hover {
-  opacity: 100%;
-}
-
-.social__icon--f:hover {
-  opacity: 100%;
-}
-
-.social__icon--t:hover {
-  opacity: 100%;
-}
-
-.google-icon {
-  color: white;
-}
-
-.twitter-icon {
-  color: white;
-}
-
-.facebook-icon {
-  color: white;
 }
 
 /*Footer*/
@@ -785,7 +760,7 @@ footer {
 
 .modal {
   position: relative;
-  background-color: #fefefe;
+  background-color: #efefef;
   margin: 20% auto;
   padding: 20px 20px 30px 20px;
   border: 1px solid #888;
@@ -967,7 +942,7 @@ footer {
   }
 
   .fixed-top.scrolled {
-    background-color: #fff;
+    background-color: #efefef;
     transition: background-color 200ms linear;
   }
 
