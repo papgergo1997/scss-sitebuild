@@ -329,9 +329,27 @@ body {
 }
 
 .nav {
-  background: transparent;
+  background: #efefef;
   display: flex;
   justify-content: center;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  padding-bottom: 0.75rem;
+}
+@media screen and (min-width: 960px) {
+  .nav {
+    background-color: transparent;
+  }
+}
+.nav .navbar-brand {
+  text-decoration: none;
+  color: #fdcc52;
+  font-family: "catamaran";
+  position: absolute;
+  left: 3rem;
+  top: 0.5rem;
+  font-size: large;
 }
 .nav__container {
   align-items: flex-start;
@@ -339,7 +357,7 @@ body {
   flex-direction: row-reverse;
   width: 100%;
 }
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 960px) {
   .nav__container {
     align-items: center;
   }
@@ -351,42 +369,45 @@ body {
   display: flex;
 }
 .nav__container .nav__hamburger--label {
-  align-items: center;
+  flex-direction: row;
   cursor: pointer;
   display: flex;
-  flex-wrap: wrap;
-  height: 1.5rem;
-  padding: 0.75rem;
-  width: 1.5rem;
-  border: 1px solid #222;
+  height: 1rem;
+  line-height: 1rem;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  border: 1px solid #d8d7d7;
   border-radius: 5px;
   padding: 1px 10px 8px 10px;
   margin-right: 36px;
+  margin-top: 10px;
 }
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 960px) {
   .nav__container .nav__hamburger--label {
     display: none;
   }
 }
-.nav__container .nav__list {
+.nav__container .navbar-nav {
   display: none;
   flex-direction: column;
   list-style: none;
   margin: 0 auto;
+  margin-top: 40px;
   padding: 0;
   width: 100%;
 }
-@media screen and (min-width: 40em) {
-  .nav__container .nav__list {
+@media screen and (min-width: 960px) {
+  .nav__container .navbar-nav {
     display: flex;
     flex-direction: row;
     width: auto;
   }
 }
-.nav__container .nav__list .nav__item {
+.nav__container .navbar-nav .nav__item {
   text-align: start;
 }
-.nav__container .nav__list .nav__item .nav__link {
+.nav__container .navbar-nav .nav__item .nav__link {
   color: #222;
   display: block;
   line-height: 1rem;
@@ -397,14 +418,19 @@ body {
   font-weight: 500;
   text-decoration: none;
 }
-.nav__container .nav__list .nav__item .nav__link:hover {
+.nav__container .navbar-nav .nav__item .nav__link:hover {
   color: #fdcc52;
 }
-.nav__container .nav__hamburger--line {
-  background: #222;
-  display: block;
-  height: 2px;
-  width: 1.5rem;
+.nav__container .menu-text {
+  font-size: 12px;
+  font-family: "catamaran", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-right: 2px;
+}
+.nav__container .fa-bars {
+  font-size: 11px;
+  margin-top: 5px;
 }
 
 .start-page {
@@ -751,16 +777,11 @@ footer {
     font-size: 34px;
   }
 
-  .navbar {
-    width: 58%;
-    background-color: transparent;
-  }
-
-  .nav-link {
+  .nav__link {
     color: #d9c6e5;
   }
 
-  .nav-link:hover {
+  .nav__link:hover {
     color: white;
   }
 
@@ -771,6 +792,7 @@ footer {
 
   .navbar.scrolled {
     width: 100%;
+    background-color: #efefef;
   }
 
   .navbar-brand.scrolled {
@@ -786,12 +808,12 @@ footer {
     margin-right: 299px;
   }
 
-  .nav-link.scrolled {
+  .nav__link.scrolled {
     color: #454545;
     font-weight: bold;
   }
 
-  .nav-link.scrolled:hover {
+  .nav__link.scrolled:hover {
     color: #fdcc52;
   }
 }
