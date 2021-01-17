@@ -957,7 +957,9 @@ footer {
   }
 
   .nav__link {
-    color: #d9c6e5;
+    color: #d9c6e5 !important;
+    padding-right: 0 !important;
+    font-size: 10px !important;
   }
 
   .nav__link:hover {
@@ -975,7 +977,7 @@ footer {
   }
 
   .navbar-brand {
-    margin-left: 260px;
+    margin-left: 280px;
   }
 
   .navbar-brand:hover {
@@ -983,7 +985,8 @@ footer {
   }
 
   .navbar-nav {
-    margin-right: 299px;
+    margin-right: 300px !important;
+    margin-top: 0 !important;
   }
 
   .navbar.scrolled {
@@ -992,7 +995,7 @@ footer {
   }
 
   .navbar-brand.scrolled {
-    margin-left: 260px;
+    margin-left: 280px;
     color: #454545;
   }
 
@@ -1000,12 +1003,8 @@ footer {
     color: #fdcc52;
   }
 
-  .navbar-nav.scrolled {
-    margin-right: 299px;
-  }
-
   .nav__link.scrolled {
-    color: #454545;
+    color: #454545 !important;
     font-weight: bold;
   }
 

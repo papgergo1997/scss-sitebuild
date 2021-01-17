@@ -663,7 +663,9 @@ color: rgb(100, 100, 100);
         padding-bottom: 1rem;
     }
     .nav__link {
-        color: rgb(217, 198, 229) ;
+        color: rgb(217, 198, 229) !important;
+        padding-right: 0 !important;
+        font-size: 10px !important;
     }
     .nav__link:hover {
         color: white !important;
@@ -677,30 +679,28 @@ color: rgb(100, 100, 100);
         width: 100%;
     }
     .navbar-brand {
-        margin-left: 260px;
+        margin-left: 280px;
     }
     .navbar-brand:hover {
         color: white;
     }
     .navbar-nav {
-        margin-right: 299px;
+        margin-right: 300px !important;
+        margin-top: 0 !important;
     }
     .navbar.scrolled {
         width: 100%;
         background-color: white; 
     }
     .navbar-brand.scrolled {
-        margin-left: 260px;
+        margin-left: 280px;
         color: rgb(69, 69, 69) ;
     }
     .navbar-brand.scrolled:hover {
         color: #fdcc52 ;
-    }
-    .navbar-nav.scrolled {
-        margin-right: 299px;
-    }
+    }    
     .nav__link.scrolled {
-        color: rgb(69, 69, 69) ;
+        color: rgb(69, 69, 69) !important;
         font-weight: bold;
     }
     .nav__link.scrolled:hover {
