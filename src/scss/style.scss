@@ -37,7 +37,7 @@ body {
     width: 100%;
     padding-bottom: 0.75rem;
 
-    @media screen and (min-width: 1280px){
+    @media screen and (min-width: 992px){
         background-color: transparent;
     }
     .navbar-brand {
@@ -56,7 +56,7 @@ body {
         flex-direction: row-reverse;
         width: 100%;
 
-        @media screen and (min-width: 1280px) {
+        @media screen and (min-width: 992px) {
             align-items: center;
         }
 
@@ -85,7 +85,7 @@ body {
             margin-right: 36px;
             margin-top: 10px;
 
-            @media screen and (min-width: 1280px) {
+            @media screen and (min-width: 992px) {
                 display: none;
             }
         }
@@ -100,7 +100,7 @@ body {
             width: 100%;
             
 
-            @media screen and (min-width: 1280px) {
+            @media screen and (min-width: 992px) {
                 display: flex;
                 flex-direction: row;
                 width: auto;
@@ -524,7 +524,7 @@ color: rgb(100, 100, 100);
 
 /*Desktop settings*/
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 992px) {
     .modal {
         width: 40%;
     }
