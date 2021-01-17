@@ -563,11 +563,19 @@ color: rgb(100, 100, 100);
         font-size: 12px;
         line-height: 1.2rem;
     }
+    .discover-headline {
+        font-size: 60px;
+        padding-top: 3rem;
+    }
+    
     .discover-p {
-        font-size: 13px;
+        font-size: 15px;
+    }
+    .badge-container {
+        padding-bottom: 4rem;
     }
     .badges {
-        width: 140px;
+        width: 170px;
     }
     .card-body{
         text-align: left;
@@ -581,14 +589,16 @@ color: rgb(100, 100, 100);
         justify-content: flex-end;
     }
     .card-img {
-        width: 230px;
+        width: 260px;
     }
     .card-title {
         font-size: 39px;
         line-height: 47px;
         margin-top: 0;
     }
-    
+    .start-page{
+        padding-bottom: 1rem;
+    }
     .nav__link {
         color: rgb(217, 198, 229) ;
     }
