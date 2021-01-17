@@ -1,7 +1,17 @@
-let modal = document.querySelector('.section__modal');
-let modalBtn = document.querySelector('.modal__button');
-let closeBtn = document.querySelector('.close');
-let closeBtn2 = document.querySelector('.close2');
+let privacyModal = document.querySelector('.section__modal--privacy');
+let privacyModalBtn = document.querySelector('.modal__button--privacy');
+let privacyCloseBtn = document.querySelector('.privacy__close');
+let privacyCloseBtn2 = document.querySelector('.privacy__close2');
+
+let termsModal = document.querySelector('.section__modal--terms');
+let termsModalBtn = document.querySelector('.modal__button--terms');
+let termsCloseBtn = document.querySelector('.terms__close');
+let termsCloseBtn2 = document.querySelector('.terms__close2');
+
+let faqModal = document.querySelector('.section__modal--faq');
+let faqModalBtn = document.querySelector('.modal__button--faq');
+let faqCloseBtn = document.querySelector('.faq__close');
+let faqCloseBtn2 = document.querySelector('.faq__close2');
 
 
 $(document).ready(function () {
@@ -47,20 +57,49 @@ $(function () {
     });
 });
 
-modalBtn.onclick = function () {
-    modal.style.display = "block";
-    modal.classList.add("showModal");
+privacyModalBtn.onclick = function () {
+    privacyModal.style.display = "block";
+    privacyModal.classList.add("showModal");
 };
 
-closeBtn.onclick = function () {
-    modal.style.display = "none";
+privacyCloseBtn.onclick = function () {
+    privacyModal.style.display = "none";
 };
-closeBtn2.onclick = function () {
-    modal.style.display = "none";
+privacyCloseBtn2.onclick = function () {
+    privacyModal.style.display = "none";
 };
 
 window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target == privacyModal) {
+        privacyModal.style.display = "none";
+    } else if (event.target == termsModal) {
+        termsModal.style.display = "none";
+    } else if (event.target == faqModal) {
+        faqModal.style.display = "none";
     }
 }
+
+
+termsModalBtn.onclick = function () {
+    termsModal.style.display = "block";
+    termsModal.classList.add("showModal");
+};
+termsCloseBtn.onclick = function () {
+    termsModal.style.display = "none";
+};
+termsCloseBtn2.onclick = function () {
+    termsModal.style.display = "none";
+};
+
+
+faqModalBtn.onclick = function () {
+    faqModal.style.display = "block";
+    faqModal.classList.add("showModal");
+};
+faqCloseBtn.onclick = function () {
+    faqModal.style.display = "none";
+};
+faqCloseBtn2.onclick = function () {
+    faqModal.style.display = "none";
+};
+

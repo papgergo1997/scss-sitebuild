@@ -437,7 +437,7 @@ footer {
     margin-bottom: -0.05rem;
 }
 
-.modal__button {
+[class^="modal__button"] {
     color: rgb(98, 98, 98);
     font-family: "muli", Arial, Helvetica, sans-serif;
     line-height: 1.75rem;
@@ -445,13 +445,13 @@ footer {
     margin-right: 6px;
 }
 
-.modal__button:hover {
+[class^="modal__button"]:hover {
     cursor: pointer;
     color: #fdcc52;
 }
 
 /*Modal*/
-.section__modal {
+[class^=section__modal] {
     display: none; 
     position: fixed; 
     z-index: 1; 
@@ -525,6 +525,9 @@ color: rgb(100, 100, 100);
 /*Desktop settings*/
 
 @media screen and (min-width: 1280px) {
+    .modal {
+        width: 40%;
+    }
     .social-headline {
         font-size: 40px;
     }    
@@ -621,7 +624,7 @@ color: rgb(100, 100, 100);
         color: rgb(217, 198, 229) ;
     }
     .nav__link:hover {
-        color: white ;
+        color: white !important;
     }
     .fixed-top.scrolled {
         background-color: #fff ;
@@ -633,6 +636,9 @@ color: rgb(100, 100, 100);
     }
     .navbar-brand {
         margin-left: 260px;
+    }
+    .navbar-brand:hover {
+        color: white;
     }
     .navbar-nav {
         margin-right: 299px;
@@ -656,6 +662,6 @@ color: rgb(100, 100, 100);
         font-weight: bold;
     }
     .nav__link.scrolled:hover {
-        color: #fdcc52 ;
+        color: #fdcc52 !important;
     }
 }
