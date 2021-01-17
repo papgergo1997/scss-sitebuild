@@ -69,15 +69,7 @@ privacyCloseBtn2.onclick = function () {
     privacyModal.style.display = "none";
 };
 
-window.onclick = function (event) {
-    if (event.target == privacyModal) {
-        privacyModal.style.display = "none";
-    } else if (event.target == termsModal) {
-        termsModal.style.display = "none";
-    } else if (event.target == faqModal) {
-        faqModal.style.display = "none";
-    }
-}
+
 
 
 termsModalBtn.onclick = function () {
@@ -91,7 +83,6 @@ termsCloseBtn2.onclick = function () {
     termsModal.style.display = "none";
 };
 
-
 faqModalBtn.onclick = function () {
     faqModal.style.display = "block";
     faqModal.classList.add("showModal");
@@ -103,3 +94,12 @@ faqCloseBtn2.onclick = function () {
     faqModal.style.display = "none";
 };
 
+window.onclick = function (event) {
+    if (event.target == privacyModal) {
+        privacyModal.style.display = "none";
+    } else if (event.target == termsModal) {
+        termsModal.style.display = "none";
+    } else if (event.target == faqModal) {
+        faqModal.style.display = "none";
+    }
+};
