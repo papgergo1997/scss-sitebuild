@@ -37,7 +37,7 @@ body {
     width: 100%;
     padding-bottom: 0.75rem;
 
-    @media screen and (min-width: 960px){
+    @media screen and (min-width: 1280px){
         background-color: transparent;
     }
     .navbar-brand {
@@ -56,7 +56,7 @@ body {
         flex-direction: row-reverse;
         width: 100%;
 
-        @media screen and (min-width: 960px) {
+        @media screen and (min-width: 1280px) {
             align-items: center;
         }
 
@@ -85,7 +85,7 @@ body {
             margin-right: 36px;
             margin-top: 10px;
 
-            @media screen and (min-width: 960px) {
+            @media screen and (min-width: 1280px) {
                 display: none;
             }
         }
@@ -98,16 +98,16 @@ body {
             margin-top: 40px;
             padding: 0;
             width: 100%;
+            
 
-            @media screen and (min-width: 960px) {
+            @media screen and (min-width: 1280px) {
                 display: flex;
                 flex-direction: row;
                 width: auto;
             }
 
             .nav__item {
-                text-align: start;
-                
+                text-align: start;                
 
                 .nav__link {
                     color: #222;
@@ -119,6 +119,7 @@ body {
                     font-family: "catamaran", Arial, Helvetica, sans-serif;
                     font-weight: 500;
                     text-decoration: none;
+                    
 
                     &:hover {
                         color: #fdcc52;
@@ -146,6 +147,8 @@ body {
 
 .start-page {
     background-image: url(/dist/css/img/bg-pattern.png), linear-gradient(to right, rgb(218, 36, 49), rgb(122, 67, 151));
+    background-repeat: repeat;
+    background-attachment: fixed;
 }
 
 .card-body {
@@ -471,12 +474,6 @@ footer {
     box-shadow: 0 0 9px rgb(50, 50, 50);   
 }
 
-@media screen and (min-width:560px) { 
-    .modal {
-        width: 50%;
-    }
-}
-
 .modal__title {
     margin: 0;
 }
@@ -527,41 +524,61 @@ color: rgb(100, 100, 100);
 
 /*Desktop settings*/
 
-@media screen and (min-width:992px) {
+@media screen and (min-width: 1280px) {
     .social-headline {
         font-size: 40px;
-    }
-    .contact-page {
-        background-size: 120%;
-    }
+    }    
     .contact-head {
         margin-left: 140px ;
     }
     .contact-headline {
-        font-size: 58px;
+        font-size: 65px;
+        line-height: 70px;
     }
     .my-btn {
-        font-size: 8px;
-        padding: 12px 35px 12px 35px;
+        font-size: 9px;
+        padding: 14px 35px 14px 35px;
+    }
+    .contact-page{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .contact-background {
+        top: -230px;
+        height: 165%;
+        width: 115%;
+    }
+    .features-container {
+        margin-top: 4rem;
+    }
+    .features-separator{
+        display: flex;
+        flex-direction: row;
+    }
+    .feature-container {
+        margin-right: 2rem;
     }
     .features-headline {
-        font-size: 40px;
+        font-size: 43px;
+        margin-top: 3rem;
     }
     .features-p {
-        font-size: 13.5px;
+        font-size: 14px;
     }
+   
     .features-img {
-        width: 230px;
+        width: 260px;
+        margin-bottom: 0;
     }
     .feature-icons {
-        font-size: 60px;
+        font-size: 70px;
     }
     .embed-headline {
-        font-size: 22px;
+        font-size: 25px;
     }
     .embed-p {
-        font-size: 12px;
-        line-height: 1.2rem;
+        font-size: 14px;
+        line-height: 1.4rem;
     }
     .discover-headline {
         font-size: 60px;
@@ -579,7 +596,7 @@ color: rgb(100, 100, 100);
     }
     .card-body{
         text-align: left;
-
+       
         .my-btn {
             margin-right: auto;
             margin-left: 33px
@@ -587,6 +604,7 @@ color: rgb(100, 100, 100);
     }
     .card__img--container {
         justify-content: flex-end;
+        
     }
     .card-img {
         width: 260px;
@@ -609,12 +627,22 @@ color: rgb(100, 100, 100);
         background-color: #fff ;
         transition: background-color 200ms linear;
     }
+    .navbar {
+        padding: 0;
+        width: 100%;
+    }
+    .navbar-brand {
+        margin-left: 260px;
+    }
+    .navbar-nav {
+        margin-right: 299px;
+    }
     .navbar.scrolled {
         width: 100%;
         background-color: white; 
     }
     .navbar-brand.scrolled {
-        margin-left: 335px;
+        margin-left: 260px;
         color: rgb(69, 69, 69) ;
     }
     .navbar-brand.scrolled:hover {
